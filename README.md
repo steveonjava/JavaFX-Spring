@@ -4,8 +4,8 @@ JavaFX-Spring
 Example application demonstrating integration of JavaFX and Spring technologies on the client and server.  For more details about the technologies used, and a details of the code, please refer to the following 3 part blog series:
 
 * [JavaFX in Spring Day 1 - Application Initialization](http://steveonjava.com/javafx-and-spring-day-1)
-* [JavaFX in Spring Day 2 - Configuration and FXML](http://steveonjava.com/javafx-and-spring-day-2)
-* [JavaFX in Spring Day 3 - Authentication and Authorization](http://steveonjava.com/javafx-and-spring-day-3)
+* [JavaFX in Spring Day 2 - Configuration and FXML](http://steveonjava.com/javafx-in-spring-day-2)
+* [JavaFX in Spring Day 3 - Authentication and Authorization](http://steveonjava.com/javafx-in-spring-day-3)
 
 To run this example, you will need to build and run the server and client projects individually using maven.  You can either do this via an IDE or from the command line.
 
