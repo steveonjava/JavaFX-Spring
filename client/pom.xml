@@ -14,6 +14,13 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>javafx</artifactId>
+            <version>2.2</version>
+            <scope>system</scope>
+            <systemPath>${java.home}/lib/jfxrt.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.5.6</version>
@@ -110,6 +117,15 @@
                 <configuration>
                     <source>${java-version}</source>
                     <target>${java-version}</target>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
+                    <classpathScope>compile</classpathScope>
+                    <mainClass>steveonjava.client.CustomerApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
