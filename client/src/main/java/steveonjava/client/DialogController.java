@@ -28,5 +28,5 @@
 package steveonjava.client;
 
 public interface DialogController {
-    void setDialog(AutowireFXMLDialog dialog);
+    void setDialog(FXMLDialog dialog);
 }

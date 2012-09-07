@@ -30,9 +30,9 @@ package steveonjava.client;
 import javafx.fxml.FXML;
 
 public class ErrorController implements DialogController {
-    private AutowireFXMLDialog dialog;
+    private FXMLDialog dialog;
 
-    public void setDialog(AutowireFXMLDialog dialog) {
+    public void setDialog(FXMLDialog dialog) {
         this.dialog = dialog;
     }
 

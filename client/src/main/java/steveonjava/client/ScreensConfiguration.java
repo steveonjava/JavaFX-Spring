@@ -62,19 +62,37 @@ public class ScreensConfiguration {
 
     @Bean
     @Scope("prototype")
-    AutowireFXMLDialog errorDialog() {
-        return new AutowireFXMLDialog(getClass().getResource("Error.fxml"), primaryStage, StageStyle.UNDECORATED);
+    FXMLDialog errorDialog() {
+        return new FXMLDialog(errorController(), getClass().getResource("Error.fxml"), primaryStage, StageStyle.UNDECORATED);
     }
 
     @Bean
     @Scope("prototype")
-    AutowireFXMLDialog addUserDialog() {
-        return new AutowireFXMLDialog(getClass().getResource("AddCustomer.fxml"), primaryStage);
+    ErrorController errorController() {
+        return new ErrorController();
     }
 
     @Bean
     @Scope("prototype")
-    AutowireFXMLDialog loginDialog() {
-        return new AutowireFXMLDialog(getClass().getResource("Login.fxml"), primaryStage, StageStyle.UNDECORATED);
+    FXMLDialog addCustomerDialog() {
+        return new FXMLDialog(addCustomerController(), getClass().getResource("AddCustomer.fxml"), primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    AddCustomerController addCustomerController() {
+        return new AddCustomerController();
+    }
+
+    @Bean
+    @Scope("prototype")
+    FXMLDialog loginDialog() {
+        return new FXMLDialog(loginController(), getClass().getResource("Login.fxml"), primaryStage, StageStyle.UNDECORATED);
+    }
+
+    @Bean
+    @Scope("prototype")
+    LoginController loginController() {
+        return new LoginController(this);
     }
 }

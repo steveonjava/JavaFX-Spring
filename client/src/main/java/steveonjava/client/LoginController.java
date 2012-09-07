@@ -41,12 +41,15 @@ import org.springframework.security.core.context.SecurityContextHolder;
 public class LoginController implements DialogController {
     @Autowired
     private AuthenticationManager authenticationManager;
-    @Autowired
     private ScreensConfiguration screens;
-    private AutowireFXMLDialog dialog;
+    private FXMLDialog dialog;
 
-    public void setDialog(AutowireFXMLDialog dialog) {
+    public void setDialog(FXMLDialog dialog) {
         this.dialog = dialog;
+    }
+
+    public LoginController(ScreensConfiguration screens) {
+        this.screens = screens;
     }
 
     @FXML

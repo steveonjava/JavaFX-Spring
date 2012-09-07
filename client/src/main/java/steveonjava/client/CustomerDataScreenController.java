@@ -56,7 +56,7 @@ public class CustomerDataScreenController {
 
     @Secured({"ROLE_MANAGER", "ROLE_EMPLOYEE"})
     public void addCustomer() {
-        screens.addUserDialog().show();
+        screens.addCustomerDialog().show();
     }
 
     public void removeCustomer(Customer customer) {

@@ -34,9 +34,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class AddCustomerController implements DialogController {
     @Autowired
     private CustomerModel model;
-    private AutowireFXMLDialog dialog;
+    private FXMLDialog dialog;
 
-    public void setDialog(AutowireFXMLDialog dialog) {
+    public void setDialog(FXMLDialog dialog) {
         this.dialog = dialog;
     }
 
