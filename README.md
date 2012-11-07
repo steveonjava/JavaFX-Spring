@@ -16,10 +16,10 @@ To start with, please make sure you have the following prerequisites:
 
 The command line steps to get this up and running are:
 
-    cd client
+    cd server
     mvn jetty:run
     cd ..
-    cd server
+    cd client
     mvn compile exec:java
 
 If it doesn't work, make sure that maven is running the right version of java by calling "mvn -version".  If you are still having trouble, check out the blogs mentioned above, and post if your issue is not resolved.
