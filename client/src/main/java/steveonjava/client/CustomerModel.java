@@ -50,13 +50,13 @@ public class CustomerModel {
 
     @SuppressWarnings("unchecked")
     public void loadData() {
-        Customer[] customers = restTemplate.getForObject("http://localhost:8080/crm/customers", Customer[].class);
+        Customer[] customers = restTemplate.getForObject("http://localhost:8080/javafx-spring-server/crm/customers", Customer[].class);
         this.customers.setAll(customers);
     }
 
     @Secured("ROLE_MANAGER")
     public void remove(Customer customer) {
-        restTemplate.delete("http://localhost:8080/crm/customer/" + customer.getId());
+        restTemplate.delete("http://localhost:8080/javafx-spring-server/crm/customer/" + customer.getId());
         customers.remove(customer);
     }
 
@@ -65,7 +65,7 @@ public class CustomerModel {
         customer.setFirstName(firstName);
         customer.setLastName(lastName);
         customer.setSignupDate(new Date());
-        Integer id = restTemplate.postForObject("http://localhost:8080/crm/customers", customer, Integer.class);
+        Integer id = restTemplate.postForObject("http://localhost:8080/javafx-spring-server/crm/customers", customer, Integer.class);
         customer.setId(id);
         customers.add(customer);
     }
