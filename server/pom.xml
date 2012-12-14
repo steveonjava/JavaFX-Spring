@@ -74,6 +74,11 @@
             <artifactId>cglib</artifactId>
             <version>2.2.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.ow2.jonas.osgi</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>5.0.5</version>
+        </dependency>
     </dependencies>
     <repositories>
         <!-- For testing against latest Spring snapshots -->
