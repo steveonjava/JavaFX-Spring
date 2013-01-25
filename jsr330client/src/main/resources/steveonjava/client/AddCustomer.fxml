@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.999755859375" prefWidth="371.999755859375" style="-fx-background-color: #EEEEEE" xmlns:fx="http://javafx.com/fxml" fx:controller="steveonjava.client.AddCustomerController">
+  <children>
+    <GridPane id="GridPane" layoutY="95.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="40.0">
+      <children>
+        <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="firstName" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="lastName" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      </columnConstraints>
+      <hgap>
+        <Long fx:value="10" />
+      </hgap>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <vgap>
+        <Long fx:value="10" />
+      </vgap>
+    </GridPane>
+    <Label layoutX="50.0" layoutY="28.0" text="Add New Customer">
+      <font>
+        <Font size="28.0" />
+      </font>
+    </Label>
+    <Button defaultButton="true" mnemonicParsing="false" onAction="#add" text="Add" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="41.0" />
+    <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="Cancel" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="108.0" />
+    <Separator layoutX="22.0" layoutY="74.0" prefWidth="329.0" />
+    <Separator layoutX="22.0" layoutY="165.0" prefWidth="329.0" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="482.0" style="-fx-background-color: lightblue" xmlns:fx="http://javafx.com/fxml" fx:controller="steveonjava.client.LoginController">
+  <children>
+    <GridPane id="GridPane" layoutX="48.0" layoutY="115.0">
+      <children>
+        <TextField fx:id="username" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <PasswordField fx:id="password" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Username" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="Password" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      </columnConstraints>
+      <hgap>
+        <Long fx:value="10" />
+      </hgap>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <vgap>
+        <Long fx:value="10" />
+      </vgap>
+    </GridPane>
+    <Label layoutX="45.0" layoutY="36.0" text="Welcome to the Dallas Spring User Group" textFill="#664900">
+      <font>
+        <Font name="System Bold" size="18.0" />
+      </font>
+    </Label>
+    <Label fx:id="header" layoutX="48.0" layoutY="82.0" text="Please login with your credentials:" textFill="GREY" />
+    <ImageView fitHeight="111.25471620029381" fitWidth="106.24324035644531" layoutX="343.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@logo.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <Button defaultButton="true" layoutX="264.0" layoutY="187.0" mnemonicParsing="false" onAction="#login" text="Login" />
+    <Hyperlink layoutX="119.0" layoutY="187.0" onAction="#employee" text="Employee">
+      <font>
+        <Font size="12.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.800" green="0.512" red="0.000" fx:id="x2" />
+      </textFill>
+    </Hyperlink>
+    <Hyperlink font="$x1" layoutX="188.0" layoutY="187.0" onAction="#manager" text="Manager" textFill="$x2" />
+  </children>
+</AnchorPane>
